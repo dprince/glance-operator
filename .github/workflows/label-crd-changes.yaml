@@ -1,0 +1,16 @@
+name: Label CRD Changes
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'config/crd/bases/**'
+
+jobs:
+  call-build-workflow:
+    permissions:
+      pull-requests: write
+      issues: write
+    with:
+      label_name: crd-changes
+    uses: dprince/openstack-k8s-operators-ci/.github/workflows/label-pr.yaml@label-crd-changes
