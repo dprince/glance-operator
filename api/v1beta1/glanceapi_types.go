@@ -80,6 +80,11 @@ type GlanceAPISpec struct {
 	// registered keystone limits
 	Quota bool `json:"quota"`
 
+	// +kubebuilder:validation:Optional
+	// +kubebuilder:default=false
+	// Test
+	Test bool `json:"test"`
+
 	// +kubebuilder:validation:Required
 	// +kubebuilder:default=memcached
 	// Memcached instance name.

@@ -1463,6 +1463,10 @@ spec:
                     description: StorageRequest -
                     type: string
                 type: object
+              test:
+                default: false
+                description: Test
+                type: boolean
               tls:
                 description: TLS - Parameters related to the TLS
                 properties:
